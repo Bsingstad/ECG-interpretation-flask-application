@@ -1,10 +1,10 @@
 Flask==1.1.2
 future==0.18.2
-gast==0.2.2
+gast==0.3.3
 h5py==2.10.0
 Jinja2==2.11.2
-Keras-Preprocessing==1.1.0
-tensorflow-estimator==2.1.0
+Keras-Preprocessing==1.1.1
+tensorflow-estimator==2.3.0
 termcolor==1.1.0
 Werkzeug==0.16.1
 numpy==1.17.4
