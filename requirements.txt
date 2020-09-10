@@ -4,7 +4,6 @@ gast==0.2.2
 h5py==2.10.0
 Jinja2==2.11.2
 Keras-Preprocessing==1.1.0
-tensorflow==2.1.0
 tensorflow-estimator==2.1.0
 termcolor==1.1.0
 Werkzeug==0.16.1
