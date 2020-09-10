@@ -1,27 +1,27 @@
 absl-py==0.10.0
 alabaster==0.7.12
 argh==0.26.2
-astroid @ file:///C:/ci/astroid_1592481955828/work
+#astroid 
 astunparse==1.6.3
 atomicwrites==1.4.0
-attrs @ file:///tmp/build/80754af9/attrs_1598374659300/work
-autopep8 @ file:///tmp/build/80754af9/autopep8_1596578164842/work
+#attrs
+#autopep8 
 Babel==2.8.0
 backcall==0.2.0
-bcrypt @ file:///C:/ci/bcrypt_1597918112552/work
+#bcrypt 
 bleach==3.1.5
 brotlipy==0.7.0
 cachetools==4.1.1
 certifi==2020.6.20
-cffi @ file:///C:/ci/cffi_1598352799320/work
+#cffi 
 chardet==3.0.4
 click==7.1.2
-cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
+#cloudpickle 
 colorama==0.4.3
-cryptography @ file:///C:/ci/cryptography_1598873979408/work
+#cryptography
 decorator==4.4.2
 defusedxml==0.6.0
-diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
+#diff-match-patch 
 docutils==0.16
 entrypoints==0.3
 flake8==3.8.3
@@ -33,70 +33,70 @@ google-auth-oauthlib==0.4.1
 google-pasta==0.2.0
 grpcio==1.32.0
 h5py==2.10.0
-idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+#idna
 imagesize==1.2.0
-importlib-metadata @ file:///C:/ci/importlib-metadata_1593446525189/work
-intervaltree @ file:///tmp/build/80754af9/intervaltree_1598376443606/work
-ipykernel @ file:///C:/ci/ipykernel_1596208728219/work/dist/ipykernel-5.3.4-py3-none-any.whl
-ipython @ file:///C:/ci/ipython_1598883894321/work
+#importlib-metadata
+#intervaltree
+#ipykernel 
+#ipython
 ipython-genutils==0.2.0
-isort @ file:///C:/ci/isort_1597597762781/work
+#isort
 itsdangerous==1.1.0
-jedi @ file:///C:/ci/jedi_1592833832328/work
+#jedi 
 Jinja2==2.11.2
-jsonschema @ file:///C:/ci/jsonschema_1594363671836/work
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1594826976318/work
+#jsonschema
+#jupyter-client 
 jupyter-core==4.6.3
 Keras-Preprocessing==1.1.2
-keyring @ file:///C:/ci/keyring_1598866734005/work
+#keyring
 lazy-object-proxy==1.4.3
 Markdown==3.2.2
-MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+#MarkupSafe
 mccabe==0.6.1
-mistune @ file:///C:/ci/mistune_1594373272338/work
-nbconvert @ file:///C:/ci/nbconvert_1594372737468/work
+#mistune
+#nbconvert
 nbformat==5.0.7
 numpy==1.18.5
-numpydoc @ file:///tmp/build/80754af9/numpydoc_1594166760263/work
+#numpydoc
 oauthlib==3.1.0
 opt-einsum==3.3.0
 packaging==20.4
 pandocfilters==1.4.2
-paramiko @ file:///tmp/build/80754af9/paramiko_1598886428689/work
+#paramiko
 parso==0.7.0
 pathtools==0.1.2
-pexpect @ file:///C:/ci/pexpect_1594383465186/work
-pickleshare @ file:///C:/ci/pickleshare_1594374056827/work
+#pexpect
+#pickleshare
 pluggy==0.13.1
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1598885458782/work
+#prompt-toolkit
 protobuf==3.13.0
-psutil @ file:///C:/ci/psutil_1598352273540/work
+#psutil
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.6.0
-pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
-pydocstyle @ file:///tmp/build/80754af9/pydocstyle_1598885001695/work
+#pycparser 
+#pydocstyle 
 pyflakes==2.2.0
 Pygments==2.6.1
-pylint @ file:///C:/ci/pylint_1598605958085/work
-PyNaCl @ file:///C:/ci/pynacl_1595009241355/work
-pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
+#pylint
+#PyNaCl 
+#pyOpenSSL
 pyparsing==2.4.7
 pyrsistent==0.16.0
-PySocks @ file:///C:/ci/pysocks_1594394709107/work
+#PySocks
 python-dateutil==2.8.1
-python-jsonrpc-server @ file:///tmp/build/80754af9/python-jsonrpc-server_1594397536060/work
-python-language-server @ file:///C:/ci/python-language-server_1594152769556/work
+#python-jsonrpc-server
+#python-language-server
 pytz==2020.1
 pywin32==227
-pywin32-ctypes @ file:///C:/ci/pywin32-ctypes_1594392691209/work
+#pywin32-ctypes
 PyYAML==5.3.1
 pyzmq==19.0.1
 QDarkStyle==2.8.1
 QtAwesome==0.7.2
-qtconsole @ file:///tmp/build/80754af9/qtconsole_1598374667791/work
+#qtconsole
 QtPy==1.9.0
-requests @ file:///tmp/build/80754af9/requests_1592841827918/work
+#requests
 requests-oauthlib==1.3.0
 rope==0.17.0
 rsa==4.6
@@ -105,33 +105,33 @@ scipy==1.4.1
 six==1.15.0
 snowballstemmer==2.0.0
 sortedcontainers==2.2.2
-Sphinx @ file:///tmp/build/80754af9/sphinx_1597428793432/work
+#Sphinx
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-devhelp==1.0.2
 sphinxcontrib-htmlhelp==1.0.3
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
-spyder @ file:///C:/ci/spyder_1599052032150/work
-spyder-kernels @ file:///C:/ci/spyder-kernels_1599051798778/work
+#spyder
+#spyder-kernels
 tensorboard==2.3.0
 tensorboard-plugin-wit==1.7.0
 tensorflow==2.3.0
 tensorflow-estimator==2.3.0
 termcolor==1.1.0
 testpath==0.4.4
-toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+#toml
 tornado==6.0.4
 traitlets==4.3.3
 typed-ast==1.4.1
 ujson==1.35
-urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
-watchdog @ file:///C:/ci/watchdog_1593446515400/work
-wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+#urllib3
+#watchdog
+#wcwidth
 webencodings==0.5.1
 Werkzeug==1.0.1
 win-inet-pton==1.1.0
 wincertstore==0.2
 wrapt==1.12.1
-yapf @ file:///tmp/build/80754af9/yapf_1593528177422/work
+#yapf
 zipp==3.1.0
