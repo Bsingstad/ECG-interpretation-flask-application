@@ -4,8 +4,8 @@
 
 <div class="jumbotron" lang="en">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
+
+            <div class="text-center">
 
                 <h1 class="display-4">Automatic ECG interpretation</h1>
                 <p class="lead">This application can be used to interpret 12 lead ECGs</p>
@@ -15,19 +15,15 @@
                 <a class="btn btn-primary btn-lg" href="https://physionet.org/" role="button">Find data</a>
                 </p>
             </div>
-        </div>
+
     </div>
 </div>
-<form class="md-form" method="post" action="/" enctype="multipart/form-data" lang="en">
+<form method="post" action="/" enctype="multipart/form-data" lang="en">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <div class="file-field">
-                    <div class="btn btn-pink btn-rounded btn-sm float-left">
-                        <input type="file" name="file" autocomplete="off" required placeholder="Upload your file">
-                    </div>
-                </div>
-                <div class="form-group">
+        <div class="text-center">
+            <div class="file-field">
+                <div class="btn btn-pink btn-rounded btn-sm float-left">
+                    <input type="file" name="file" autocomplete="off" required placeholder="Upload your file">
                     <input type="submit" class="btn btn-primary" value="Submit">
                 </div>
             </div>
@@ -35,7 +31,12 @@
     </div>
 </form>
 <br>
-<div class="p-3 mb-2 bg-dark text-white">{{ prediction_text }}</div>
+<br>
+<br>
+<div class="container">
+    <div class="p-3 mb-2 bg-dark text-white">{{ prediction_text }}</div>
+</div>
+
     
 {% endblock %}
 
