@@ -114,7 +114,8 @@ def submit_file():
         reshaped_signal = padded_signal.reshape(1,5000,12)
         prediction = model.predict(reshaped_signal)[0]
         result_string = pred_to_labels(prediction)
-        return result_string
+        return render_template('index.html', prediction_text='The predicted diagnoses are: {}'.format(result_string))
+        
 
 @app.route('/test', methods=['GET'])
 def test():
