@@ -3,27 +3,40 @@
 {% block content %}
 
 <div class="jumbotron" lang="en">
-    <h1 class="display-4">Electrocardiographic interpretation application</h1>
-    <p class="lead">This application can be used to interpret 12 lead ECGs</p>
-    <hr class="my-4">
-    <p>You can upload .mat files (make sure it is 12-lead ECGs) from Physionet and get them analysed by a Deep Learning model </p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="https://physionet.org/" role="button">Find data</a>
-    </p>
-  </div>
-<form class="md-form" method="post" action="/" enctype="multipart/form-data" lang="en">
-    <div class="file-field">
-        <div class="btn btn-pink btn-rounded btn-sm float-left">
-            <input type="file" name="file" autocomplete="off" required placeholder="Upload your file">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                <h1 class="display-4">Automatic ECG interpretation</h1>
+                <p class="lead">This application can be used to interpret 12 lead ECGs</p>
+                <hr class="my-4">
+                <p>You can upload .mat files (make sure it is 12-lead ECGs) from Physionet and we will analyse them using a Deep Learning model </p>
+                <p class="lead">
+                <a class="btn btn-primary btn-lg" href="https://physionet.org/" role="button">Find data</a>
+                </p>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Submit">
+</div>
+<form class="md-form" method="post" action="/" enctype="multipart/form-data" lang="en">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="file-field">
+                    <div class="btn btn-pink btn-rounded btn-sm float-left">
+                        <input type="file" name="file" autocomplete="off" required placeholder="Upload your file">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                </div>
+            </div>
+        </div>
     </div>
 </form>
 <br>
-    {{ prediction_text }}
-
+<div class="p-3 mb-2 bg-dark text-white">{{ prediction_text }}</div>
+    
 {% endblock %}
 
 
