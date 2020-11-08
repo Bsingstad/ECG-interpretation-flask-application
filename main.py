@@ -1,3 +1,5 @@
+
+
 from flask import Flask, url_for, request, render_template, jsonify, flash
 import tensorflow as tf
 from tensorflow import keras
@@ -8,9 +10,68 @@ import numpy as np
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+from dash.dependencies import Input, Output
 import plotly.express as px
+import pandas as pd
 
 app = Flask(__name__)
+app_dash = dash.Dash(__name__, server=app, url_base_pathname='/pathname/')
+
+global df
+df = pd.DataFrame({
+    "I": np.ones(5000),
+    "II": np.ones(5000),
+    "III": np.ones(5000),
+    "aVL": np.ones(5000),
+    "aVR": np.ones(5000),
+    "aVF": np.ones(5000),
+    "V1": np.ones(5000),
+    "V2": np.ones(5000),
+    "V3": np.ones(5000),
+    "V4": np.ones(5000),
+    "V5": np.ones(5000),
+    "V6": np.ones(5000),
+    "samples": np.arange(5000)})
+
+fig = px.line(df, x="samples", y="II")
+
+app_dash.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for Python.
+    '''),
+    dcc.Dropdown(
+        id='dropdown',
+        options=[{'label': i, 'value': i} for i in df.columns.unique()[0:-1]],
+        value='II'
+    ),
+    html.Div(id='output'),
+
+    dcc.Graph(
+        id='example-graph',
+        figure=fig
+    )
+])
+             
+@app_dash.callback(Output('example-graph', 'figure'),
+              [Input('dropdown', 'value')])
+def update_output_1(value):
+    # Safely reassign the filter to a new variable
+    #df_new = df[value]
+    fig = px.line(df, x="samples", y=value)
+
+    fig.update_layout(transition_duration=500)
+    return fig
+
+
+
+
+#def update_figure(new_ecg):
+#    df['II'] = new_ecg
+#    fig = px.line(df, x="samples", y="ECG")
+#    fig.update_layout(transition_duration=500)
+#    return fig
 
 def load_challenge_data(filename):
     x = loadmat(filename)
@@ -101,7 +162,6 @@ model = FCN()
 model.load_weights("assets/fcn_model.h5")
 
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -117,6 +177,19 @@ def submit_file():
         padded_signal = keras.preprocessing.sequence.pad_sequences(data, maxlen=5000, truncating='post',padding="post")
         reshaped_signal = padded_signal.reshape(1,5000,12)
         prediction = model.predict(reshaped_signal)[0]
+        
+        df['I'] = reshaped_signal[0].T[0]
+        df['II'] = reshaped_signal[0].T[1]
+        df['III'] = reshaped_signal[0].T[2]
+        df['aVL'] = reshaped_signal[0].T[3]
+        df['aVF'] = reshaped_signal[0].T[4]
+        df['aVR'] = reshaped_signal[0].T[5]
+        df['V1'] = reshaped_signal[0].T[6]
+        df['V2'] = reshaped_signal[0].T[7]
+        df['V3'] = reshaped_signal[0].T[8]
+        df['V4'] = reshaped_signal[0].T[9]
+        df['V5'] = reshaped_signal[0].T[10]
+        df['V6'] = reshaped_signal[0].T[11]
         result_string = pred_to_labels(prediction)
         result_string = result_string[:-2]
         return render_template('index.html', prediction_text='The predicted diagnoses are: {}'.format(result_string))
@@ -126,6 +199,12 @@ def submit_file():
 def test():
     return 'Pinging Model Application!!'
 
+@app.route('/dash') 
+def render_dashboard():
+    return app_dash.index()
+
+
+
 if __name__ == '__main__':
-    #app.run(host="127.0.0.1", port=8080, debug=True)
-    app.run()
+    app.run(host="127.0.0.1", port=8080, debug=True)
+    #app.run()
