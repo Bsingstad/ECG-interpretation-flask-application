@@ -36,10 +36,10 @@ df = pd.DataFrame({
 fig = px.line(df, x="samples", y="II")
 
 app_dash.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    html.H1(children='ECG-viewer'),
 
     html.Div(children='''
-        Dash: A web application framework for Python.
+        Select which of the leads in the ECG you want to inspect.
     '''),
     dcc.Dropdown(
         id='dropdown',
@@ -199,5 +199,5 @@ def render_dashboard():
 
 
 if __name__ == '__main__':
-    #app.run(host="127.0.0.1", port=8080, debug=True)
-    app.run()
+    app.run(host="127.0.0.1", port=8080, debug=True)
+    #app.run()
