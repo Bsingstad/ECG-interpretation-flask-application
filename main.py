@@ -197,9 +197,6 @@ def test():
 def render_dashboard():
     return app_dash.index()
 
-@app.route('/vmd_timestamp')
-def vmd_timestamp():
-return render_template('vmd_timestamp.html')
 
 
 
