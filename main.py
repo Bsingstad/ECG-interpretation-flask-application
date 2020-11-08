@@ -67,12 +67,6 @@ def update_output_1(value):
 
 
 
-#def update_figure(new_ecg):
-#    df['II'] = new_ecg
-#    fig = px.line(df, x="samples", y="ECG")
-#    fig.update_layout(transition_duration=500)
-#    return fig
-
 def load_challenge_data(filename):
     x = loadmat(filename)
     data = np.asarray(x['val'], dtype=np.float64)
