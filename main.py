@@ -169,8 +169,8 @@ def submit_file():
         # do prediction
         data = load_challenge_data('uploaded_files/'+ secure_filename(f.filename))
         padded_signal = keras.preprocessing.sequence.pad_sequences(data, maxlen=5000, truncating='post',padding="post")
-        #reshaped_signal = padded_signal.reshape(1,5000,12)
-        reshaped_signal = np.moveaxis(padded_signal, 0, -1)
+        reshaped_signal = padded_signal.reshape(1,5000,12)
+        #reshaped_signal = np.moveaxis(padded_signal, 0, -1)
         prediction = model.predict(reshaped_signal)[0]
         
         df['I'] = reshaped_signal[0].T[0]
