@@ -1,5 +1,3 @@
-
-
 from flask import Flask, url_for, request, render_template, jsonify, flash
 import tensorflow as tf
 from tensorflow import keras
@@ -169,8 +167,8 @@ def submit_file():
         # do prediction
         data = load_challenge_data('uploaded_files/'+ secure_filename(f.filename))
         padded_signal = keras.preprocessing.sequence.pad_sequences(data, maxlen=5000, truncating='post',padding="post")
-        reshaped_signal = padded_signal.reshape(1,5000,12)
-        #reshaped_signal = np.moveaxis(padded_signal, 0, -1)
+        #reshaped_signal = padded_signal.reshape(1,5000,12)
+        reshaped_signal = np.expand_dims(np.moveaxis(padded_signal,0,-1),0)
         prediction = model.predict(reshaped_signal)[0]
         
         df['I'] = reshaped_signal[0].T[0]
@@ -200,5 +198,5 @@ def render_dashboard():
 
 
 if __name__ == '__main__':
-    #app.run(host="127.0.0.1", port=8080, debug=True)
-    app.run()
+    app.run(host="127.0.0.1", port=8080, debug=True)
+    #app.run()
