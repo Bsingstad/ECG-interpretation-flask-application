@@ -15,7 +15,7 @@ h5py==2.10.0
 idna==2.10
 importlib-metadata==1.7.0
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 Keras-Preprocessing==1.1.2
 Markdown==3.2.2
 MarkupSafe==1.1.1
@@ -40,7 +40,7 @@ Werkzeug==1.0.1
 wincertstore==0.2
 wrapt==1.12.1
 zipp==3.1.0
-dash==1.17.0
+dash==1.20.0
 dash-core-components==1.13.0
 dash-html-components==1.1.1
 dash-renderer==1.8.3
