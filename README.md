@@ -1,4 +1,4 @@
-# Automatic ECG interpretation - a Flask application
+# Automatic ECG interpretation - a Python Flask application
 
 ### How to run the application locally
 Open a command line tool and navigate to the directory of this project
